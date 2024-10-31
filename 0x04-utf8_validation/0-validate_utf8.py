@@ -10,4 +10,9 @@ def validUTF8(data):
     list_length = 0
     if (len(data) == 0) or (len(data) == 1 and data[0] >> 7 == 0):
         return True
-    
+    for num in data:
+        if list_length:
+            list_length -= 1
+        else:
+            flag = False
+ 
