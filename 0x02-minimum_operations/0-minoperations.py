@@ -27,5 +27,6 @@ def minOperations(n):
             operations += i  # Each factor contributes to the operations
             n //= i  # Reduce n by the factor
     if n > 1:
-        operations += n  # If n is a prime number, it contributes to the operations
+        operations += n
+        # If n is a prime number, it contributes to the operations
     return operations
