@@ -22,8 +22,10 @@ def minOperations(n):
     operations = 0
     current = 1
     # We will divide n by its factors to simulate the operations
-    for i in range(2, n + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         while n % i == 0:
             operations += i  # Each factor contributes to the operations
             n //= i  # Reduce n by the factor
+    if n > 1:
+        operations += n  # If n is a prime number, it contributes to the operations
     return operations
